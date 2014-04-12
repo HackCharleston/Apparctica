@@ -127,3 +127,7 @@ a.list-group-item.active, a.list-group-item.active:focus, a.list-group-item.acti
     border: 1px solid black;
     white-space: nowrap;
 }
+img 
+{
+    max-width: none;
+}
