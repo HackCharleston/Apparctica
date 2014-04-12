@@ -166,7 +166,7 @@ app.controller('MainController', function($rootScope, $scope, analytics, $http) 
         .error(function(data, status) {
             alert("Error");
         });
-
+    // $scope.locations = [];
     // $http({
     //     method: 'GET',
     //     url: 'https://api.parse.com/1/classes/location',
@@ -176,7 +176,7 @@ app.controller('MainController', function($rootScope, $scope, analytics, $http) 
     //     }
     // })
     //     .success(function(data, status) {
-    //         $scope.items = data;
+    //         $scope.locations = data;
     //     })
     //     .error(function(data, status) {
     //         alert("Error");

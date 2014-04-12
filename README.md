@@ -1,3 +1,10 @@
+#Team Apparctica
+###Digsouth Hackcharleston!
+
+http://lolt.herokuapp.com
+
+
+
 # Mobile Angular UI with Bootstrap 3
 
 ## Angular &amp; Bootstrap 3 for Mobile web and applications
