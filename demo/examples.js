@@ -34,6 +34,9 @@ app.config(function($routeProvider, $locationProvider) {
     $routeProvider.when('/map', {
         templateUrl: "map.html"
     });
+    $routeProvider.when('/about', {
+        templateUrl: "about.html"
+    });
 });
 
 app.service('analytics', [
@@ -123,12 +126,10 @@ app.controller('MainController', function($rootScope, $scope, analytics) {
             longitude: -79.9333
         },
         zoom: 8,
-        locations: [
-        {
+        locations: [{
             latitude: 32.681955,
             longitude: -80.027751
-        }
-        ]
+        }]
     };
 
     $scope.userAgent = navigator.userAgent;
