@@ -35,7 +35,7 @@
         "semver": "~2.2.1"
     },
     "dependencies": {
-        "gzippo": "^0.1.7",
-        "express": "^3.0.0"
+        "gzippo": "~0.2.0",
+        "express": "~3.4.8"
     }
 }
