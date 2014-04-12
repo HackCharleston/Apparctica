@@ -13,6 +13,10 @@ app.config(function($routeProvider, $locationProvider) {
     $routeProvider.when('/markets', {
         templateUrl: "scroll.html"
     });
+    $routeProvider.when('/market/:id', {
+        templateUrl: "market.html",
+        controller: 'marketController'
+    });
     $routeProvider.when('/toggle', {
         templateUrl: "toggle.html"
     });
@@ -102,6 +106,22 @@ app.directive("carouselExampleItem", function($rootScope, $swipe) {
     }
 });
 
+
+app.controller('marketController', function($rootScope, $scope, analytics, $http, $routeParams) {
+    $scope.items = [];
+
+    $http({
+        method: 'GET',
+        url: 'http://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=' + $routeParams.id,
+        headers: {}
+    })
+        .success(function(data, status) {
+            $scope.items = data;
+        })
+        .error(function(data, status) {
+            alert("Error");
+        });
+});
 
 app.controller('MainController', function($rootScope, $scope, analytics, $http) {
 
