@@ -3,12 +3,13 @@
 
     <div class="list-group">
       <div class="list-group-item">
-      <h2></h2>
+      <h2>{{market_name}}</h2>
       <p>
         <small>{{items.marketdetails.Address}}</small>
         </p>
         </h1>
       </div>
+      <span ng-show="items.marketdetails.Products">
       <div class="list-group-item media">
         <div class="pull-left">
           <i class="fa fa-star feature-icon"></i>
@@ -18,15 +19,15 @@
             {{items.marketdetails.Products}}
         </div>
       </div>
-
-
+</span>
+<span ng-show="items.marketdetails.Schedule">
       <div class="list-group-item media">
         <div class="pull-left">
           <i class="fa fa-sun-o feature-icon"></i>
         </div>
         <div class="media-body">
-            <h3 class="media-heading">Seasonal Calender</h3>
-            Check out what the locals are buying and selling this season and where.
+            <h3 class="media-heading">Schedule</h3>
+            {{items.marketdetails.Schedule}}
         </div>
       </div>
 

@@ -3,7 +3,7 @@
 <div class="scrollable">
   <div class="scrollable-content">
     <div class="list-group">
-      <a ng-repeat="item in items.results" href="#/market/{{ item.id }}" class="list-group-item">
+      <a ng-repeat="item in items.results" href="#/market/{{ item.id }}?market_name={{ item.marketname }}" class="list-group-item">
         {{ item.marketname }} <i class="fa fa-chevron-right pull-right"></i>
       </a>
     </div>

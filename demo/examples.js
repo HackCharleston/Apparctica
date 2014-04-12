@@ -109,7 +109,7 @@ app.directive("carouselExampleItem", function($rootScope, $swipe) {
 
 app.controller('marketController', function($rootScope, $scope, analytics, $http, $routeParams) {
     $scope.items = [];
-
+    $scope.market_name = $routeParams.market_name;
     $http({
         method: 'GET',
         url: 'http://search.ams.usda.gov/farmersmarkets/v1/data.svc/mktDetail?id=' + $routeParams.id,
