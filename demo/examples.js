@@ -10,7 +10,7 @@ app.config(function($routeProvider, $locationProvider) {
     $routeProvider.when('/', {
         templateUrl: "home.html"
     });
-    $routeProvider.when('/scroll', {
+    $routeProvider.when('/markets', {
         templateUrl: "scroll.html"
     });
     $routeProvider.when('/toggle', {
@@ -22,7 +22,7 @@ app.config(function($routeProvider, $locationProvider) {
     $routeProvider.when('/accordion', {
         templateUrl: "accordion.html"
     });
-    $routeProvider.when('/overlay', {
+    $routeProvider.when('/education', {
         templateUrl: "overlay.html"
     });
     $routeProvider.when('/forms', {
@@ -102,7 +102,8 @@ app.directive("carouselExampleItem", function($rootScope, $swipe) {
     }
 });
 
-app.controller('MainController', function($rootScope, $scope, analytics) {
+
+app.controller('MainController', function($rootScope, $scope, analytics, $http) {
 
     $rootScope.$on("$routeChangeStart", function() {
         $rootScope.loading = true;
@@ -131,6 +132,36 @@ app.controller('MainController', function($rootScope, $scope, analytics) {
             longitude: -80.027751
         }]
     };
+
+    $scope.items = [];
+
+    $http({
+        method: 'GET',
+        url: 'http://search.ams.usda.gov/farmersmarkets/v1/data.svc/zipSearch?zip=29492',
+        headers: {}
+    })
+        .success(function(data, status) {
+            $scope.items = data;
+        })
+        .error(function(data, status) {
+            alert("Error");
+        });
+
+    // $http({
+    //     method: 'GET',
+    //     url: 'https://api.parse.com/1/classes/location',
+    //     headers: {
+    //         'X-Parse-Application-Id': 'sjiKwkVavpSin6QNBMN10tARAl54ezhGMcD8L3xI',
+    //         'X-Parse-REST-API-Key': 'y4xm3BZWorsphZisMGIailK5oV4idbAyaXGl1aau'
+    //     }
+    // })
+    //     .success(function(data, status) {
+    //         $scope.items = data;
+    //     })
+    //     .error(function(data, status) {
+    //         alert("Error");
+    //     });
+
 
     $scope.userAgent = navigator.userAgent;
     $scope.chatUsers = [{
