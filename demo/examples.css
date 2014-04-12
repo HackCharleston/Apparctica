@@ -113,3 +113,5 @@ a.list-group-item.active, a.list-group-item.active:focus, a.list-group-item.acti
 .feature-icon{
   color: #8ba6a0;
 }
+
+.angular-google-map-container { height: 400px; }

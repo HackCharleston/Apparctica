@@ -48,6 +48,18 @@ module.exports = (grunt) ->
         src: ["angular.js", "angular.min.js"],
         dest: "demo/assets/js"
 
+      demo_angular_maps:
+        expand: true,
+        cwd: "bower_components/angular-google-maps/dist"
+        src: ["angular-google-maps.js"],
+        dest: "demo/assets/js"
+
+      demo_underscore:
+        expand: true,
+        cwd: "bower_components/underscore"
+        src: ["underscore-min.js"],
+        dest: "demo/assets/js"
+
       demo_angular_route:
         expand: true,
         cwd: "bower_components/angular-route"
@@ -234,6 +246,8 @@ module.exports = (grunt) ->
                                 "copy:demo"
                                 "copy:demo_angular"
                                 "copy:demo_angular_route"
+                                "copy:demo_angular_maps"
+                                "copy:demo_underscore"
                               ]
 
 
