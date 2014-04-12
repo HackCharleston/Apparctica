@@ -91,3 +91,25 @@ h1 {
 .carousel-inner>.item.active + .item {
   z-index: 1999;
 }
+
+/*Custom!*/
+
+body{
+  color: #4c5558;
+}
+a.list-group-item.active, a.list-group-item.active:focus, a.list-group-item.active:hover {
+  background-color: #8ba6a0;
+  border-color:#677a76;
+}
+
+.navbar-app .btn-navbar, .navbar-app .btn{
+  color: #4c5558;
+}
+
+.navbar-app .btn-navbar:hover, .navbar-app .btn:hover{
+  color: #8ba6a0;
+}
+
+.feature-icon{
+  color: #8ba6a0;
+}
