@@ -1,3 +1,16 @@
 <div class="scrollable"> 
-  <google-map center="map.center" zoom="map.zoom"></google-map>
+  <google-map center="map.center" zoom="map.zoom" draggable='true'>
+<!--   <marker coords='map.locations' labelContent='test'>
+    
+  </marker> -->
+  <markers models="map.locations" coords="'self'" icon="'icon'" click="'onClicked'" >
+            <windows show="'showWindow'" closeClick="'closeClick'" ng-cloak>
+                <p>Mexi!</p>
+                <p ng-non-bindable>This is an info window at {{ latitude | number:4 }}, {{ longitude | number:4 }}!</p>
+                <p class="muted">My marker will stay open when the window is popped up!</p>
+            </windows>
+        </markers>
+  </google-map>
+
+</marker>
 </div>

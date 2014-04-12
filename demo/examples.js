@@ -119,10 +119,16 @@ app.controller('MainController', function($rootScope, $scope, analytics) {
 
     $scope.map = {
         center: {
-            latitude: 45,
-            longitude: -73
+            latitude: 32.7833,
+            longitude: -79.9333
         },
-        zoom: 8
+        zoom: 8,
+        locations: [
+        {
+            latitude: 32.681955,
+            longitude: -80.027751
+        }
+        ]
     };
 
     $scope.userAgent = navigator.userAgent;
